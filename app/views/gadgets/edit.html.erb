@@ -9,7 +9,7 @@
         <%= f.text_field :name, class:"form-control", :placeholder => "ガジェット名をご入力ください" %>
 
         <h4 class="mt-3">ガジェット画像</h4>
-        <%= attachment_image_tag @user, :image, :fill, 200, 200, fallback: "no_image.jpg"%></br>
+        <%= attachment_image_tag @ga, :image, :fill, 200, 200, fallback: "no_image.jpg"%></br>
         <%= f.attachment_field :image, placeholder: "ガジェット画像" %></p>
 
         <h4 class="mt-3">ガジェット紹介</h4>
@@ -24,7 +24,9 @@
         <%= link_to 'ガジェット一覧へ', gadgets_path, class:"btn-warning btn-block form-control" %>
       </div>
       <div class="text-center mt-2 mb-3">
-        <%= link_to '削除', gadgets_path(@gadget), method: :delete, "data-confirm" => "本当に消しますか", class:"btn btn-danger btn-block form-contro" %>
+        <% if @gadget.user == current_user %>
+          <%= link_to '削除', gadget_path(@gadget), method: :delete, "data-confirm" => "本当に消しますか", class:"btn btn-danger btn-block form-contro" %>
+        <% end %>
       </div>
     </div>
   </div>

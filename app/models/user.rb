@@ -7,4 +7,5 @@ class User < ApplicationRecord
   
   #バリデーション
   validates :name, presence: true, length: {maximum: 20, minimum: 2}, uniqueness: true
+  
 end

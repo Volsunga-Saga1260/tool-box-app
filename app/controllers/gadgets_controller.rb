@@ -35,8 +35,9 @@ class GadgetsController < ApplicationController
   end
   
   def destroy
-    @gadget.destroy
-    redirect_to request.referer
+    gadget = Gadget.find(params[:id])
+    gadget.destroy
+    redirect_to gadgets_path
   end
 
   private
