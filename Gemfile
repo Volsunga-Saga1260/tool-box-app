@@ -71,3 +71,4 @@ gem "refile-mini_magick"
 gem 'kaminari','~> 1.2.1'
 
 gem 'devise'
+gem 'activeadmin'
