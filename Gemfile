@@ -72,3 +72,5 @@ gem 'kaminari','~> 1.2.1'
 
 gem 'devise'
 gem 'activeadmin'
+
+gem "toastr-rails"
