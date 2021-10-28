@@ -74,3 +74,4 @@ gem 'devise'
 gem 'activeadmin'
 
 gem "toastr-rails"
+
